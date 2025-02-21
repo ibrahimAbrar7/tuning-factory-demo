@@ -44,8 +44,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Address Section */}
-        <div className="flex flex-col items-center text-left">
-          <h3 className="text-3xl font-bold mb-4">Address</h3>
+        <div className="flex flex-col items-center text-center">
+          <h3 className="text2xl md:text-3xl font-bold mb-4">Address</h3>
           <div className="flex items-center space-x-2 text-md md:text-xl mb-2">
             <FaPhoneAlt className="text-white" />
             <p>403-993-6742</p>
@@ -56,15 +56,17 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex items-center space-x-2 text-md md:text-xl">
             <FaEnvelope className="text-white" />
-            <p>general@tuningfactory.ca</p>
+            <Link href="mailto:general@tuningfactory.ca" className="underline">
+              general@tuningfactory.ca
+            </Link>
           </div>
+
           <div className="flex items-center space-x-3 mt-4 justify-center">
             {[
-              { icon: <FaFacebookF />, href: "#" },
-              { icon: <FaInstagram />, href: "#" },
-              { icon: <FaXTwitter />, href: "#" },
-              { icon: <FaYoutube />, href: "#" },
-              { icon: <FaLinkedinIn />, href: "#" },
+              { icon: <FaFacebookF />, href: "https://www.facebook.com/TuningfactoryCanada" },
+              { icon: <FaInstagram />, href: "https://www.instagram.com/tuningfactoryms/" },
+              { icon: <FaXTwitter />, href: "https://x.com/tuningfactoryca?mx=2" },
+              { icon: <FaYoutube />, href: "https://www.youtube.com/@tuningfactoryca8309" },
             ].map(({ icon, href }, index) => (
               <Link key={index} href={href}>
                 <div className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black">
@@ -76,8 +78,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Opening Hours Section */}
-        <div className="flex flex-col items-center text-left">
-          <h3 className="text-3xl font-bold mb-4">Opening Hours</h3>
+        <div className="flex flex-col items-center text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Opening Hours</h3>
           <p className="text-md md:text-xl">
             Monday - Friday:
             <br />
@@ -91,10 +93,10 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Pages Section */}
-        <div className="flex flex-col items-center text-left">
-          <h3 className="text-3xl font-bold mb-4">Pages</h3>
+        <div className="flex flex-col items-center text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Pages</h3>
           <ul>
-            {["Home", "About", "Contact"].map((page, index) => (
+            {["/", "About", "Contact"].map((page, index) => (
               <li key={index} className="mb-2">
                 <Link href={`/${page.toLowerCase()}`} className="hover:text-orange-500 transition text-md md:text-xl">
                   {page}
@@ -107,9 +109,17 @@ const Footer: React.FC = () => {
 
       {/* Footer Bottom Section */}
       <div className="relative mt-8 pt-4 text-center">
-        <p className="text-md md:text-xl">© Tuning Factory, &nbsp; All Rights Reserved.</p>
-        <div className="absolute inset-x-0 top-0 border-t border-gray-500 w-1/3 mx-auto"></div>
-      </div>
+  <p className="text-md md:text-xl">
+    ©{" "}
+    <Link href="https://tuningfactory.ca" target="_blank" className="underline">
+      Tuning Factory
+    </Link>
+    , &nbsp; All Rights Reserved.
+  </p>
+  <div className="absolute inset-x-0 top-0 border-t border-gray-500 w-1/3 mx-auto"></div>
+</div>
+
+      
     </footer>
   );
 };
