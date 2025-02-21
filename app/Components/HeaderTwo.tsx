@@ -108,7 +108,7 @@ const HeaderTwo: React.FC = () => {
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image
-              src="/logo-img.jpeg" // Light mode logo
+              src="/logo-img.png" // Light mode logo
               alt="Logo"
               width={150}
               height={40}
