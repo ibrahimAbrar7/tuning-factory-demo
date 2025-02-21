@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
 
         {/* Address Section */}
         <div className="flex flex-col items-center text-center">
-          <h3 className="text2xl md:text-3xl font-bold mb-4">Address</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">Address</h3>
           <div className="flex items-center space-x-2 text-md md:text-xl mb-2">
             <FaPhoneAlt className="text-white" />
             <p>403-993-6742</p>
