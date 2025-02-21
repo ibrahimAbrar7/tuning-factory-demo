@@ -32,7 +32,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {/* Vehicles We Service Section */}
         {vehicleData.headings.vehiclesWeService &&
           vehicleData.names.length > 0 && (
-            <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <section className="border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
               <h2 className="text-xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
                 {vehicleData.headings.vehiclesWeService}
               </h2>
@@ -52,7 +52,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {/* Additional Info Section */}
         {vehicleData.headings.additionalInfo &&
           vehicleData.additionalInfo.length > 0 && (
-            <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <section className="border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
               <h2 className="text-xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
                 {vehicleData.headings.additionalInfo}
               </h2>
@@ -71,7 +71,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
 
         {/* Services Section */}
         {vehicleData.headings.services && vehicleData.services.length > 0 && (
-          <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+          <section className="border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
             <h2 className="text-xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
               {vehicleData.headings.services}
             </h2>
@@ -91,7 +91,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {/* Performance Upgrades Section */}
         {vehicleData.headings.performanceUpgrades &&
           vehicleData.performance.length > 0 && (
-            <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <section className="border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
               <h2 className="text-xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase">
                 {vehicleData.headings.performanceUpgrades}
               </h2>
