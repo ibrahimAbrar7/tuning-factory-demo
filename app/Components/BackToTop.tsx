@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { FaArrowUpLong } from "react-icons/fa6";
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,12 +27,12 @@ const BackToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-4 right-4 p-3 bg-gradient-to-r from-orange-900 to-orange-600 z-50 text-white rounded-full shadow-lg transform transition-all duration-300 ${
+      className={`fixed bottom-4 right-4 p-4 bg-orange-500 hover:bg-orange-400 z-50 text-white rounded-full shadow-lg transform transition-all ${
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75 pointer-events-none"
       }`}
       aria-label="Back to Top"
     >
-      ↑
+      <FaArrowUpLong size={20} className="animate-bounce duration-2000"/> 
     </button>
   );
 };

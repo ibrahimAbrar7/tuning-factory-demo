@@ -3,6 +3,8 @@ import { vehiclesData } from "../../../data/vehicles";
 import HeaderOne from "@/app/Components/HeaderOne";
 import HeaderTwo from "@/app/Components/HeaderTwo";
 import Footer from "@/app/Components/Footer";
+import ThemeToggle from "@/app/Components/ThemeToggle";
+import BackToTop from "@/app/Components/BackToTop";
 
 interface Params {
   id: string; // The `id` is passed as a string from the URL
@@ -30,15 +32,15 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {/* Vehicles We Service Section */}
         {vehicleData.headings.vehiclesWeService &&
           vehicleData.names.length > 0 && (
-            <section className="bg-white p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
-              <h2 className="text-3xl font-semibold text-gray-900 mb-6 pl-4 space-y-3">
+            <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+              <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
                 {vehicleData.headings.vehiclesWeService}
               </h2>
-              <ul className="list-disc pl-8 space-y-1 text-gray-800">
+              <ul className="list-disc pl-8 space-y-1 text-gray-800 dark:text-gray-300">
                 {vehicleData.names.map((name, index) => (
                   <li
                     key={`${vehicleData.id}-vehicle-${index}`}
-                    className="text-lg"
+                    className="text-lg list-none animate-bounce-1s"
                   >
                     {name}
                   </li>
@@ -50,15 +52,15 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {/* Additional Info Section */}
         {vehicleData.headings.additionalInfo &&
           vehicleData.additionalInfo.length > 0 && (
-            <section className="bg-white p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
-              <h2 className="text-3xl font-semibold text-gray-900 mb-6 pl-4 space-y-3">
+            <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+              <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
                 {vehicleData.headings.additionalInfo}
               </h2>
-              <ul className="list-disc pl-6 space-y-1 text-gray-800">
+              <ul className="list-disc pl-6 space-y-1 text-gray-800 dark:text-gray-300">
                 {vehicleData.additionalInfo.map((additionalInfo, index) => (
                   <li
                     key={`${vehicleData.id}-info-${index}`}
-                    className="text-lg"
+                    className="text-lg animate-bounce-1s"
                   >
                     {additionalInfo}
                   </li>
@@ -69,15 +71,15 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
 
         {/* Services Section */}
         {vehicleData.headings.services && vehicleData.services.length > 0 && (
-          <section className="bg-white p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-6 pl-4 space-y-3">
+          <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
               {vehicleData.headings.services}
             </h2>
-            <ul className="list-disc pl-6 space-y-1 text-gray-800">
+            <ul className="list-disc pl-6 space-y-1 text-gray-800 dark:text-gray-300">
               {vehicleData.services.map((service, index) => (
                 <li
                   key={`${vehicleData.id}-service-${index}`}
-                  className="text-lg"
+                  className="text-lg animate-bounce-1s"
                 >
                   {service}
                 </li>
@@ -89,11 +91,11 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {/* Performance Upgrades Section */}
         {vehicleData.headings.performanceUpgrades &&
           vehicleData.performance.length > 0 && (
-            <section className="bg-white p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
-              <h2 className="text-3xl font-semibold text-gray-900 mb-6 pl-4 space-y-3">
+            <section className="border border-gray-200 bg-white dark:bg-stone-800 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+              <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase">
                 {vehicleData.headings.performanceUpgrades}
               </h2>
-              <ul className="list-disc pl-6 space-y-1 text-gray-800">
+              <ul className="list-disc pl-6 space-y-1 text-gray-800 dark:text-gray-300">
                 {vehicleData.performance.map((upgrade, index) => (
                   <li
                     key={`${vehicleData.id}-upgrade-${index}`}
@@ -107,8 +109,13 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
           )}
       </main>
 
-      {/* Footer Section */}
       <Footer />
+      <BackToTop />
+      
+      <div className="hidden lg:block">
+        <ThemeToggle />
+      </div>
+
     </div>
   );
 };

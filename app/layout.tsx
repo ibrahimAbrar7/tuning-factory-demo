@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "next-themes"; // Import ThemeProvider
+import { ThemeProvider } from "./Components/ThemeProvider"; 
 import "./globals.css"; // Import global CSS
 
 const geistMono = Geist_Mono({
@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${geistMono.variable} antialiased`}
       >
         {/* Wrap the app in ThemeProvider */}
-        <ThemeProvider attribute="class">
+        <ThemeProvider>
           {children} {/* Render the page content */}
         </ThemeProvider>
       </body>

@@ -109,7 +109,7 @@ const Carousel: React.FC = () => {
           <button
             key={index}
             className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? "bg-black" : "bg-gray-400"
+              currentIndex === index ? "bg-orange-500" : "bg-gray-400"
             }`}
             onClick={() => emblaApi?.scrollTo(index)}
           />

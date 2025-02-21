@@ -25,18 +25,26 @@ const HeaderOne: React.FC = () => {
       </div>
 
       {/* Right Section: Social Media Icons (Visible on all screen sizes) */}
-      <div className="flex items-center space-x-4 justify-center md:justify-start w-full md:w-auto">
-        <Link href="#" className="text-orange-500 hover:text-orange-400 dark:text-gray-300">
-          <FaFacebookF size={20} />
+      <div className="flex items-center space-x-2 justify-center md:justify-start w-full md:w-auto">
+      <Link href="#" className="flex items-center">
+        <div className="bg-white p-1 hover:bg-gray-200 transition duration-200">
+          <FaFacebookF size={18} className="text-orange-500" />
+        </div>
+      </Link>
+        <Link href="#" className="flex items-center">
+        <div className="bg-white p-1 hover:bg-gray-200 transition duration-200">
+          <FaXTwitter size={18} className="text-orange-500" />
+          </div>
         </Link>
-        <Link href="#" className="text-orange-500 hover:text-orange-400 dark:text-gray-300">
-          <FaXTwitter size={20} />
+        <Link href="#" className="flex items-center">
+        <div className="bg-white p-1 hover:bg-gray-200 transition duration-200">
+          <FaInstagram size={18} className="text-orange-500" />
+          </div>
         </Link>
-        <Link href="#" className="text-orange-500 hover:text-orange-400 dark:text-gray-300">
-          <FaInstagram size={20} />
-        </Link>
-        <Link href="#" className="text-orange-500 hover:text-orange-400 dark:text-gray-300">
-          <FaYoutube size={20} />
+        <Link href="#" className="flex items-center">
+        <div className="bg-white p-1 hover:bg-gray-200 transition duration-200">
+          <FaYoutube size={18} className="text-orange-500" />
+          </div>
         </Link>
       </div>
     </div>

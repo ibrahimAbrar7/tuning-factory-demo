@@ -11,11 +11,13 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
     <footer
-      className="relative bg-cover bg-center text-white py-8 mt-12"
+      className="relative bg-cover bg-center text-white pb-8 pt-24"
       style={{
         backgroundImage: "url('/carousel-1.jpg')", // Replace with your background image path
       }}
@@ -24,9 +26,25 @@ const Footer: React.FC = () => {
       <div className="absolute inset-0 bg-black bg-opacity-80"></div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
+      <div className="relative container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Logo Section */}
+        <div className="flex flex-col items-center text-center">
+          <Link href="/">
+          <Image
+            src="/logo-img-dark.png" // Dark mode logo
+            alt="Logo"
+            width={198}
+            height={55}
+            className="border-2 border-transparent rounded-lg pb-4"
+          />
+          </Link>
+          <p className="text-md md:text-xl">
+            Tuning Factory is a Calgary automotive hobby shop focused on specific makes and models, offering tools and expertise for hassle-free repairs and upgrades.
+          </p>
+        </div>
+
         {/* Address Section */}
-        <div className="flex flex-col items-center text-justify">
+        <div className="flex flex-col items-center text-left">
           <h3 className="text-3xl font-bold mb-4">Address</h3>
           <div className="flex items-center space-x-2 text-md md:text-xl mb-2">
             <FaPhoneAlt className="text-white" />
@@ -34,49 +52,31 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex items-center space-x-2 text-md md:text-xl mb-2">
             <FaMapMarkerAlt className="text-white" />
-            <p>Calgary Alberta, Canada</p>
+            <p>Calgary, Alberta, Canada</p>
           </div>
-          
           <div className="flex items-center space-x-2 text-md md:text-xl">
             <FaEnvelope className="text-white" />
             <p>general@tuningfactory.ca</p>
           </div>
           <div className="flex items-center space-x-3 mt-4 justify-center">
-            <a
-              href="#"
-              className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="#"
-              className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="#"
-             className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black"
-            >
-              <FaXTwitter />
-            </a>
-            <a
-              href="#"
-              className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black"
-            >
-              <FaYoutube />
-            </a>
-            <a
-              href="#"
-              className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black"
-            >
-              <FaLinkedinIn />
-            </a>
+            {[
+              { icon: <FaFacebookF />, href: "#" },
+              { icon: <FaInstagram />, href: "#" },
+              { icon: <FaXTwitter />, href: "#" },
+              { icon: <FaYoutube />, href: "#" },
+              { icon: <FaLinkedinIn />, href: "#" },
+            ].map(({ icon, href }, index) => (
+              <Link key={index} href={href}>
+                <div className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black">
+                  {icon}
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 
         {/* Opening Hours Section */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-left">
           <h3 className="text-3xl font-bold mb-4">Opening Hours</h3>
           <p className="text-md md:text-xl">
             Monday - Friday:
@@ -90,24 +90,17 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center text-center">
+        {/* Pages Section */}
+        <div className="flex flex-col items-center text-left">
           <h3 className="text-3xl font-bold mb-4">Pages</h3>
           <ul>
-            <li className="mb-2">
-              <a href="#" className="hover:text-orange-500 transition text-md md:text-xl">
-                Home
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="hover:text-orange-500 transition text-md md:text-xl">
-                About
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="hover:text-orange-500 transition text-md md:text-xl">
-                Contact
-              </a>
-            </li>
+            {["Home", "About", "Contact"].map((page, index) => (
+              <li key={index} className="mb-2">
+                <Link href={`/${page.toLowerCase()}`} className="hover:text-orange-500 transition text-md md:text-xl">
+                  {page}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

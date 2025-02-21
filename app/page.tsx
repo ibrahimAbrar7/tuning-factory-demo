@@ -7,6 +7,7 @@ import Perform from './Components/Perform';
 import Form from './Components/Form';
 import Footer from './Components/Footer';
 import BackToTop from './Components/BackToTop';
+import ThemeToggle from './Components/ThemeToggle';
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
     <Form />
     <Footer />
     <BackToTop />
+    <div className="hidden lg:block">
+  <ThemeToggle />
+</div>
    </div>
   );
 }

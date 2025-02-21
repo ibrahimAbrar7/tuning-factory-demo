@@ -9,8 +9,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        'fade-in': 'fadeIn 3s ease forwards', 
+        'bounce-1s': 'bounce 1s ease forwards',
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
       fontFamily: {
-        ubuntu: ["'Ubuntu'", "sans-serif"], // Custom font
+        ubuntu: ["'Ubuntu'", "sans-serif"],
+        barlow: ["'Barlow'", "sans-serif"], // Ensure this is correct
       },
       colors: {
         background: "hsl(var(--background, 0 0% 100%))", // Default value fallback
