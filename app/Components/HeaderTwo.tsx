@@ -173,7 +173,9 @@ const HeaderTwo: React.FC = () => {
 
         <div className="flex items-center space-x-2 text-gray-700 hover:text-gray-500 dark:text-gray-300 py-2">
           <FaMobileScreenButton size={18} />
-          <span>Call : 403-993-6742</span>
+          <Link href="tel:4039936742" className="text-gray-700 hover:text-gray-500 dark:text-gray-300">
+            Call : 403-993-6742
+          </Link>
         </div>
       </div>
     </header>
