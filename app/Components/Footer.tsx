@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex items-center space-x-2 text-md md:text-xl">
             <FaEnvelope className="text-white" />
-            <Link href="mailto:general@tuningfactory.ca" className="underline">
+            <Link href="mailto:general@tuningfactory.ca">
               general@tuningfactory.ca
             </Link>
           </div>
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">Pages</h3>
           <ul>
-            {["/", "About", "Contact"].map((page, index) => (
+            {["Home", "About", "Contact"].map((page, index) => (
               <li key={index} className="mb-2">
                 <Link href={`/${page.toLowerCase()}`} className="hover:text-orange-500 transition text-md md:text-xl">
                   {page}
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
       <div className="relative mt-8 pt-4 text-center">
   <p className="text-md md:text-xl">
     ©{" "}
-    <Link href="https://tuningfactory.ca" target="_blank" className="underline">
+    <Link href="https://tuningfactory.ca" target="_blank">
       Tuning Factory
     </Link>
     , &nbsp; All Rights Reserved.
