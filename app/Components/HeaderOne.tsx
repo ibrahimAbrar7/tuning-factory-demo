@@ -26,22 +26,22 @@ const HeaderOne: React.FC = () => {
 
       {/* Right Section: Social Media Icons (Visible on all screen sizes) */}
       <div className="flex items-center space-x-2 justify-center md:justify-start w-full md:w-auto">
-      <Link href="#" className="flex items-center">
+      <Link href="https://www.facebook.com/TuningfactoryCanada" className="flex items-center">
         <div className="bg-white p-1 hover:bg-gray-200 transition duration-200">
           <FaFacebookF size={18} className="text-orange-500" />
         </div>
       </Link>
-        <Link href="#" className="flex items-center">
+        <Link href="https://x.com/tuningfactoryca?mx=2" className="flex items-center">
         <div className="bg-white p-1 hover:bg-gray-200 transition duration-200">
           <FaXTwitter size={18} className="text-orange-500" />
           </div>
         </Link>
-        <Link href="#" className="flex items-center">
+        <Link href="https://www.instagram.com/tuningfactoryms/" className="flex items-center">
         <div className="bg-white p-1 hover:bg-gray-200 transition duration-200">
           <FaInstagram size={18} className="text-orange-500" />
           </div>
         </Link>
-        <Link href="#" className="flex items-center">
+        <Link href="https://www.youtube.com/@tuningfactoryca8309" className="flex items-center">
         <div className="bg-white p-1 hover:bg-gray-200 transition duration-200">
           <FaYoutube size={18} className="text-orange-500" />
           </div>
