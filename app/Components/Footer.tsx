@@ -96,10 +96,14 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">Pages</h3>
           <ul>
-            {["Home", "About", "Contact"].map((page, index) => (
+            {[
+              { name: "Home", href: "/" },
+              { name: "About", href: "/about" },
+              { name: "Contact", href: "/contact" },
+            ].map(({ name, href }, index) => (
               <li key={index} className="mb-2">
-                <Link href={`/${page.toLowerCase()}`} className="hover:text-orange-500 transition text-md md:text-xl">
-                  {page}
+                <Link href={href} className="hover:text-orange-500 transition text-md md:text-xl">
+                  {name}
                 </Link>
               </li>
             ))}
