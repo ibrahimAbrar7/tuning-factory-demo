@@ -153,17 +153,17 @@ const HeaderTwo: React.FC = () => {
             className={`bg-white absolute w-full text-sm shadow-md rounded-md mt-2 dark:bg-slate-950 dark:text-gray-300 
             transition-all duration-300 ease-in-out transform ${isDropdownOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-2 pointer-events-none"}`}
           >
-            <Link href="/vehicles-we-specialise/1"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Audi</li></Link>
-            <Link href="/vehicles-we-specialise/2"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Volkswagen</li></Link>
-            <Link href="/vehicles-we-specialise/3"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Porsche</li></Link>
-            <Link href="/vehicles-we-specialise/4"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">BMW</li></Link>
-            <Link href="/vehicles-we-specialise/5"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Dodge Challenger</li></Link>
-            <Link href="/vehicles-we-specialise/6"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Ford Mustang and Bronco</li></Link>
-            <Link href="/vehicles-we-specialise/7"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Chevrolet/Pontiac/Cadillac</li></Link>
-            <Link href="/vehicles-we-specialise/8"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Mitsubishi EVO/DSM</li></Link>
-            <Link href="/vehicles-we-specialise/9"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Nissan Silvia</li></Link>
-            <Link href="/vehicles-we-specialise/10"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Toyota MK5 Supra</li></Link>
-            <Link href="/vehicles-we-specialise/11"><li className="hover:bg-orange-500 hover:text-white px-2 py-1">Mazda Rotary/Miata</li></Link>
+            <Link href="/vehicles-we-specialise/1"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Audi</li></Link>
+            <Link href="/vehicles-we-specialise/2"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Volkswagen</li></Link>
+            <Link href="/vehicles-we-specialise/3"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Porsche</li></Link>
+            <Link href="/vehicles-we-specialise/4"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">BMW</li></Link>
+            <Link href="/vehicles-we-specialise/5"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Dodge Challenger</li></Link>
+            <Link href="/vehicles-we-specialise/6"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Ford Mustang and Bronco</li></Link>
+            <Link href="/vehicles-we-specialise/7"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Chevrolet/Pontiac/Cadillac</li></Link>
+            <Link href="/vehicles-we-specialise/8"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Mitsubishi EVO/DSM</li></Link>
+            <Link href="/vehicles-we-specialise/9"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Nissan Silvia</li></Link>
+            <Link href="/vehicles-we-specialise/10"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Toyota MK5 Supra</li></Link>
+            <Link href="/vehicles-we-specialise/11"><li className="hover:bg-orange-500 hover:text-white px-2 py-2">Mazda Rotary/Miata</li></Link>
           </ul>
         </div>
 
