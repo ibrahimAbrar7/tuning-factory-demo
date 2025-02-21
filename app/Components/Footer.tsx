@@ -61,19 +61,20 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center space-x-3 mt-4 justify-center">
-            {[
-              { icon: <FaFacebookF />, href: "https://www.facebook.com/TuningfactoryCanada" },
-              { icon: <FaInstagram />, href: "https://www.instagram.com/tuningfactoryms/" },
-              { icon: <FaXTwitter />, href: "https://x.com/tuningfactoryca?mx=2" },
-              { icon: <FaYoutube />, href: "https://www.youtube.com/@tuningfactoryca8309" },
-            ].map(({ icon, href }, index) => (
-              <Link key={index} href={href}>
-                <div className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black">
-                  {icon}
-                </div>
-              </Link>
-            ))}
-          </div>
+  {[
+    { icon: <FaFacebookF aria-label="Facebook" />, href: "https://www.facebook.com/TuningfactoryCanada" },
+    { icon: <FaInstagram aria-label="Instagram" />, href: "https://www.instagram.com/tuningfactoryms/" },
+    { icon: <FaXTwitter aria-label="Twitter" />, href: "https://x.com/tuningfactoryca?mx=2" },
+    { icon: <FaYoutube aria-label="YouTube" />, href: "https://www.youtube.com/@tuningfactoryca8309" },
+  ].map(({ icon, href }, index) => (
+    <Link key={index} href={href} target="_blank" rel="noopener noreferrer">
+      <div className="p-3 rounded-full text-white border border-white bg-transparent hover:bg-gray-300 transition hover:text-black">
+        {icon}
+      </div>
+    </Link>
+  ))}
+</div>
+
         </div>
 
         {/* Opening Hours Section */}
