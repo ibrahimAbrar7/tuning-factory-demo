@@ -47,8 +47,11 @@ const Footer: React.FC = () => {
           <h3 className="text-2xl md:text-3xl font-bold mb-4">Address</h3>
           <div className="flex items-center space-x-2 text-md md:text-xl mb-2">
             <FaPhoneAlt className="text-white" />
-            <p>403-993-6742</p>
+            <Link href="tel:4039936742">
+              403-993-6742
+            </Link>
           </div>
+
           <div className="flex items-center space-x-2 text-md md:text-xl mb-2">
             <FaMapMarkerAlt className="text-white" />
             <p>Calgary, Alberta, Canada</p>
