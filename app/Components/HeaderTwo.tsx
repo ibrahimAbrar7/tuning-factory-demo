@@ -30,7 +30,7 @@ const HeaderTwo: React.FC = () => {
         <div className="text-2xl font-medium text-gray-700 dark:text-gray-300">
           <Link href="/">
             <Image
-              src="/logo-img.jpeg" // Light mode logo
+              src="/logo-img.png" // Light mode logo
               alt="Logo"
               width={198}
               height={55}
