@@ -91,7 +91,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {/* Performance Upgrades Section */}
         {vehicleData.headings.performanceUpgrades &&
           vehicleData.performance.length > 0 && (
-            <section className="border border-gray-200 bg-white dark:bg-stone-800 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
+            <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
               <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase">
                 {vehicleData.headings.performanceUpgrades}
               </h2>

@@ -34,7 +34,6 @@ const HeaderTwo: React.FC = () => {
               alt="Logo"
               width={198}
               height={55}
-              priority
               className="border-2 border-transparent rounded-lg dark:hidden"
             />
             <Image
