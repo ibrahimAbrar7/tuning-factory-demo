@@ -37,7 +37,8 @@ const Form: React.FC = () => {
               name="service"
               className="dark:bg-slate-900 w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
-              <option value="">Select A Service</option>
+              <option value="">Select a
+                 Service</option>
               <option value="maintenance">Maintenance & Repairs</option>
               <option value="performance">Performance</option>
             </select>

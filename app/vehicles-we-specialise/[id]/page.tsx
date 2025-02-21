@@ -33,7 +33,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {vehicleData.headings.vehiclesWeService &&
           vehicleData.names.length > 0 && (
             <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
-              <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
+              <h2 className="text-xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
                 {vehicleData.headings.vehiclesWeService}
               </h2>
               <ul className="list-disc pl-8 space-y-1 text-gray-800 dark:text-gray-300">
@@ -53,7 +53,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {vehicleData.headings.additionalInfo &&
           vehicleData.additionalInfo.length > 0 && (
             <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
-              <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
+              <h2 className="text-xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
                 {vehicleData.headings.additionalInfo}
               </h2>
               <ul className="list-disc pl-6 space-y-1 text-gray-800 dark:text-gray-300">
@@ -72,7 +72,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {/* Services Section */}
         {vehicleData.headings.services && vehicleData.services.length > 0 && (
           <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
-            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
+            <h2 className="text-xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase animate-bounce-1s">
               {vehicleData.headings.services}
             </h2>
             <ul className="list-disc pl-6 space-y-1 text-gray-800 dark:text-gray-300">
@@ -92,7 +92,7 @@ const VehiclePage = async ({ params }: { params: Promise<Params> }) => {
         {vehicleData.headings.performanceUpgrades &&
           vehicleData.performance.length > 0 && (
             <section className="border border-gray-200 bg-white dark:bg-slate-900 p-6 rounded-lg shadow-lg mx-auto max-w-3xl">
-              <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase">
+              <h2 className="text-xl md:text-4xl font-semibold text-gray-900 dark:text-gray-200 mb-6 pl-4 space-y-3 uppercase">
                 {vehicleData.headings.performanceUpgrades}
               </h2>
               <ul className="list-disc pl-6 space-y-1 text-gray-800 dark:text-gray-300">
